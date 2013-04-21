@@ -524,18 +524,12 @@
 		});
 		contenidoMarcador.add(questionOneLabel);
 		
-		var bb_questionOneYes = Ti.UI.createButtonBar({
-			labels:{ title:'Yes'},
+		var bb_questionOne = Ti.UI.createButtonBar({
+			labels:{ title:'Yes', title:'No'},
 		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
 		    width:'20%',
        		top:'36%'
-		});
-		
-		var bb_questionOneNo = Ti.UI.createButtonBar({
-			labels:{ title:'No'},
-		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-		    width:'20%',
-       		top:'36%'
+  
 		});
 		contenidoMarcador.add(bb_questionOne);
 		

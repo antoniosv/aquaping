@@ -532,7 +532,7 @@
 		});
 		
 		var bb_questionOneNo = Ti.UI.createButtonBar({
-			labels:{ title:'No'},
+			labels:{ title:'Yes'},
 		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
 		    width:'20%',
        		top:'36%'
