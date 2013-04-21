@@ -241,8 +241,8 @@
 			contenidoMarcador.add(typeLabel);
 			
 			var ducha = Ti.UI.createImageView({
-				image:'icons/water_sources_warnings/ducha.png',
-				top:'42%',
+				image:'icons/ducha.png',
+				top:'36%',
 				left:'3%',
 				height:'32px',
 				width:'32px'
@@ -250,8 +250,8 @@
 			contenidoMarcador.add(ducha);
 			
 			var noBaniarte = Ti.UI.createImageView({
-				image:'icons/water_sources_warnings/noBaniarte.png',
-				top:'42%',
+				image:'icons/noBaniarte.png',
+				top:'36%',
 				left:'24%',
 				height:'32px',
 				width:'32px'
@@ -259,14 +259,10 @@
 			contenidoMarcador.add(noBaniarte);
 			
 			var noDarselaAanimales = Ti.UI.createImageView({
-				image:'icons/water_sources_warnings/noDarselaAanimales.png',
-				top:'42%',
-				left:'45%',
-				height:'32px',
-				width:'32px'
+				image:'icons/noDarselaAanimales.png',
+				top:'36%',
+				left:'30%'
 			});
-			contenidoMarcador.add(noDarselaAanimales);
-			
 			
 			w.add(contenidoMarcador);		
 		};
@@ -524,8 +520,10 @@
 		});
 		contenidoMarcador.add(questionOneLabel);
 		
+		var buttonObjectsOne = [{ title:'Yes', title:'No'}];
+		
 		var bb_questionOne = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
+			labels:buttonObjectsOne,
 		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
 		    width:'20%',
        		top:'36%'
@@ -555,7 +553,7 @@
 		
 		var buttonObjectsTwo = [{ title:'Yes', title:'No'}];
 		var bb_questionTwo = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
+			labels:buttonObjectsTwo,
        		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
        		top:'42%'
 		});
@@ -584,7 +582,7 @@
 		
 		var buttonObjectsThree = [{ title:'Yes', title:'No'}];
 		var bb_questionThree = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
+			labels:buttonObjectsThree,
        		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
        		top:'48%'
 		});

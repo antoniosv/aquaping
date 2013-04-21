@@ -584,7 +584,7 @@
 		
 		var buttonObjectsThree = [{ title:'Yes', title:'No'}];
 		var bb_questionThree = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
+			labels:buttonObjectsThree,
        		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
        		top:'48%'
 		});

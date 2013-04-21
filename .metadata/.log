@@ -56,3 +56,24 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -data /Users/saul/Docume
 
 !ENTRY org.eclipse.ui 4 4 2013-04-21 11:43:29.636
 !MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:45:17.360
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:48:09.768
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:48:10.335
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:48:12.233
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:56:00.765
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:56:07.705
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 13:56:14.267
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined

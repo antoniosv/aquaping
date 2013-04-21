@@ -175,15 +175,6 @@
 			});
 			contenidoMarcador.add(nameLabel);
 			
-			var imageWaterSource = Ti.UI.createImageView({
-				image:'icons/water.png',
-				width:'128px',
-				height:'128px',
-				right:'3%',
-				top:'3%'
-			});
-			contenidoMarcador.add(imageWaterSource);
-			
 			var descriptionLabel = Ti.UI.createLabel({
 				text:waterSource.desc,
 				top:"9%",
@@ -239,34 +230,6 @@
 			});
 			Ti.API.info(typeLabel.text);
 			contenidoMarcador.add(typeLabel);
-			
-			var ducha = Ti.UI.createImageView({
-				image:'icons/water_sources_warnings/ducha.png',
-				top:'42%',
-				left:'3%',
-				height:'32px',
-				width:'32px'
-			});
-			contenidoMarcador.add(ducha);
-			
-			var noBaniarte = Ti.UI.createImageView({
-				image:'icons/water_sources_warnings/noBaniarte.png',
-				top:'42%',
-				left:'24%',
-				height:'32px',
-				width:'32px'
-			});
-			contenidoMarcador.add(noBaniarte);
-			
-			var noDarselaAanimales = Ti.UI.createImageView({
-				image:'icons/water_sources_warnings/noDarselaAanimales.png',
-				top:'42%',
-				left:'45%',
-				height:'32px',
-				width:'32px'
-			});
-			contenidoMarcador.add(noDarselaAanimales);
-			
 			
 			w.add(contenidoMarcador);		
 		};
@@ -524,24 +487,24 @@
 		});
 		contenidoMarcador.add(questionOneLabel);
 		
+		var buttonObjectsOne = [{ title:'Yes', title:'No'}];
+		
 		var bb_questionOne = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
-		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-		    width:'20%',
+			labels:buttonObjectsOne,
+       		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
        		top:'36%'
-  
 		});
 		contenidoMarcador.add(bb_questionOne);
 		
  		var answerQuestionOne = undefined;
 	    bb_questionOne.addEventListener('click', function(e){
 	    	if(e.index == 1){
-	    		buttonObjectsOne[1].enabled = false;
-	    		buttonObjectsOne[0].enabled = true;
+	    		buttonObjects[1].enabled = false;
+	    		buttonObjects[0].enabled = true;
 	    		answerQuestionOne = "Yes";
 	    	}else{
-	    		buttonObjectsOne[0].enabled = false;
-	    		buttonObjectsOne[1].enabled = true;
+	    		buttonObjects[0].enabled = false;
+	    		buttonObjects[1].enabled = true;
 	    		answerQuestionOne = "No";
 	    	}
 	    });
@@ -555,7 +518,7 @@
 		
 		var buttonObjectsTwo = [{ title:'Yes', title:'No'}];
 		var bb_questionTwo = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
+			labels:buttonObjectsTwo,
        		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
        		top:'42%'
 		});
@@ -584,7 +547,7 @@
 		
 		var buttonObjectsThree = [{ title:'Yes', title:'No'}];
 		var bb_questionThree = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
+			labels:buttonObjectsThree,
        		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
        		top:'48%'
 		});
