@@ -1,0 +1,37 @@
+!SESSION 2013-04-20 22:54:27.512 -----------------------------------------------
+eclipse.buildId=3.1.0.201304151600
+java.version=1.6.0_45
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/saul/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -data /Users/saul/Documents/NASA/aquaping/ -keyring /Users/saul/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-20 22:54:32.066
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-20 22:54:50.031
+!MESSAGE (Build 3.1.0.201304151600) [ERROR] com.appcelerator.titanium.mobile/debug/dashboard Unknown SDK tizen
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-20 22:54:50.033
+!MESSAGE (Build 3.1.0.201304151600) [ERROR] com.appcelerator.titanium.mobile/debug/dashboard Unknown SDK mobileweb
+
+!ENTRY org.eclipse.osgi 2 1 2013-04-20 22:55:57.366
+!MESSAGE NLS missing message: NodeTitaniumSDKCommandsHandler_mobileWebBuild in: com.appcelerator.titanium.mobile.cli.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-04-20 23:14:05.300
+!MESSAGE NLS missing message: IOSPackagerLaunchConfigurationDelegate_copy_app_error in: com.appcelerator.titanium.mobile.iphone.launching.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-04-20 23:14:05.316
+!MESSAGE NLS missing message: IOSPackagerLaunchConfigurationDelegate_copy_ipa_error in: com.appcelerator.titanium.mobile.iphone.launching.messages
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 00:46:40.147
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 00:49:54.228
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 01:04:08.393
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 01:26:49.646
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined

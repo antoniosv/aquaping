@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.android.module.packager.launchConfigurationType">
+<booleanAttribute key="ATTR_CLEAN_BEFORE_LAUNCH" value="false"/>
+<booleanAttribute key="ATTR_DISTRIBUTE_UNZIPPED" value="true"/>
+<stringAttribute key="ATTR_LOG_LEVEL" value="Info"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value=""/>
+<stringAttribute key="com.appcelerator.titanium.mobile.module.deploy_target" value="SDK"/>
+<stringAttribute key="distribute_path" value="/Users/saul/Library/Application Support/Titanium/"/>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+</launchConfiguration>

@@ -1,0 +1,16 @@
+!SESSION 2013-04-20 22:51:49.219 -----------------------------------------------
+eclipse.buildId=3.1.0.201304151600
+java.version=1.6.0_45
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/saul/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/saul/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-20 22:52:54.233
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-20 22:53:31.252
+!MESSAGE (Build 3.1.0.201304151600) [ERROR] com.appcelerator.titanium.mobile/debug/dashboard Unknown SDK tizen
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-20 22:53:31.254
+!MESSAGE (Build 3.1.0.201304151600) [ERROR] com.appcelerator.titanium.mobile/debug/dashboard Unknown SDK mobileweb

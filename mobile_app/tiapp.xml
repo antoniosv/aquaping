@@ -6,8 +6,8 @@
     <property name="acs-oauth-secret-development" type="string">nrn8vSIr5L7NzJRGSiNLDP86TclgQOSi</property>
     <property name="acs-oauth-key-development" type="string">nj1LcKWzeqoTXy9s5d2rlnPOuQkFcbN6</property>
     <property name="acs-api-key-development" type="string">qVvooAusGxpLXJ7nE0qSvYHgPmbVCZnI</property>
-    <id>com.spaceappschallenge.mWater</id>
-    <name>mWater</name>
+    <id>com.spaceappschallenge.aquaping</id>
+    <name>Aquaping</name>
     <version>1.0</version>
     <publisher>saul</publisher>
     <url>http://</url>

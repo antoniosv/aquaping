@@ -1,0 +1,367 @@
+(function(){
+    namespace.funciones = {};
+    namespace.funciones.grupoTabs=function(){
+		var tabGroup= Ti.UI.createTabGroup({
+			exitOnClose:true,
+			fullscreen:true,
+			titleControl: false,
+			navBarHidden: true,
+			orientationModes: [Titanium.UI.PORTRAIT]
+		});
+		
+		var mapWindow = namespace.funciones.mapWindow();
+		var graphWindow = namespace.funciones.graphWindow();
+		
+		namespace.Tab1 = Titanium.UI.createTab({
+			window: mapWindow,
+			title:'Water Sources',
+		});
+		namespace.Tab2 = Titanium.UI.createTab({
+			window: graphWindow,
+			title:'Contamination Graphs'
+		});
+		
+		tabGroup.addTab(namespace.Tab1);
+		tabGroup.addTab(namespace.Tab2);
+		return tabGroup;
+	
+	};
+	
+	
+	namespace.funciones.currentLocation = function(){
+		return ;
+	};
+	
+	namespace.funciones.mapWindow = function(){
+		var win = Ti.UI.createWindow({
+			navBarHidden:true
+		});
+		
+		
+		namespace.funciones.getSourceTypes();
+
+		var map = Ti.Map.createView({
+			region:{
+				latitudeDelta:0.05,
+				longitudeDelta:0.05
+			},
+			userLocation:true
+		});
+		
+		namespace.funciones.getAnnotations(map);
+		
+		var addWaterSource = Ti.UI.createButton({
+			title:' Add Water Source ',
+			backgroundColor:'rgb(9, 53, 120)',
+			font:{
+			      fontFamily:'SixCaps'
+			},
+		    touchEnabled: true, 
+			backgroundImage: 'none',
+			borderRadius:3,
+			bottom:'3%',
+			right:'3%'
+		});
+		
+		addWaterSource.addEventListener('click', function(e){
+			namespace.funciones.addWaterSourceWindow();
+		});
+		
+		map.add(addWaterSource);
+		
+		win.add(map);
+		return win;  
+	};
+	
+	namespace.funciones.getAnnotations = function(map){
+		var url = "http://data.mwater.co/apiv2/sources";
+		var client = Ti.Network.createHTTPClient({
+			onload: function(e){
+				var datos = JSON.parse(this.responseText);
+				for(i = 0; i < datos.sources.length;i++ ){
+					var mark = Ti.Map.createAnnotation({
+						longitude:datos.sources[i].longitude,
+						latitude:datos.sources[i].latitude,
+						title:datos.sources[i].name,
+						subtitle:datos.sources[i].desc,
+						image:'icons/waterdrop.png',
+						uid:datos.sources[i].uid,
+						font:{
+						      fontFamily:'SixCaps'
+						}
+					});
+					
+					var moreInfo = Ti.UI.createView({
+						height:"16px",
+						width:"16px",
+						backgroundColor:'rgb(0,255,0)',
+						info:datos.sources[i]	
+					});					
+					mark.rightView = moreInfo;
+					
+					moreInfo.addEventListener('click',function(e){
+						namespace.funciones.moreInfoWindow(e);
+					});
+					map.addAnnotation(mark);
+				}
+				return map;
+			},
+			onerror: function(e){
+				return undefined;
+			}
+		});
+		client.open("GET",url);
+		client.send();
+	};
+	
+	namespace.funciones.getSourceTypes = function(){
+		var url = "http://data.mwater.co/apiv2/source_types";
+		var client = Ti.Network.createHTTPClient();
+		client.open('GET', url);
+		client.onload = function(e){
+			Ti.API.info(JSON.parse(this.responseText));
+			Ti.App.source_types = JSON.parse(this.responseText);		
+		};
+		client.onerror = function(e){
+			Ti.App.source_types = undefined;
+		};
+		client.send();
+	};
+	
+	namespace.funciones.getWaterSourceByUid = function(uid){
+		
+	};
+	
+	
+	namespace.funciones.moreInfoWindow = function(e){
+		var back = Ti.UI.createButton({
+			title:'back'
+		});
+		
+		var w = Ti.UI.createWindow({
+			backgroundColor:'rgb(9, 53, 120)',
+			modal:true
+		});
+		back.addEventListener('click', function(e){
+			w.close();
+		});
+		
+		var contenidoMarcador = Ti.UI.createView();
+		
+		if(Ti.Platform.getOsname() == 'android'){
+			back.top = "0%";
+			back.left = "3%";
+			contenidoMarcador.add(back);
+		}else{
+			w.leftNavButton = back;
+		}
+		var url = "http://data.mwater.co/apiv2/sources/"+e.source.info.uid;
+		var client = Ti.Network.createHTTPClient();
+		client.open('GET', url);
+		client.onload = function(e){
+			var waterSource = JSON.parse(this.responseText);
+			Ti.API.info(waterSource);
+			Ti.API.info(Ti.App.source_types.source_types[0].name);
+			var nameLabel = Ti.UI.createLabel({
+				text:waterSource.name,
+				top:"3%",
+				left:"3%",
+				color:'rgb(255,255,255)'
+			});
+			contenidoMarcador.add(nameLabel);
+			
+			var descriptionLabel = Ti.UI.createLabel({
+				text:waterSource.desc,
+				top:"9%",
+				left:"3%",
+				color:'rgb(255,255,255)'
+			});
+			contenidoMarcador.add(descriptionLabel);
+			
+			var id_text = Ti.UI.createLabel({
+				text:'ID',
+				top:"15%",
+				left:"3%"
+			});
+			
+			var idLabel = Ti.UI.createLabel({
+				text:waterSource.code,
+				top:"15%",
+				left:"3%",
+				font:{
+					fontSize:"12dp"
+				},
+				color:'rgb(255,255,255)'
+			});
+			contenidoMarcador.add(idLabel);
+			
+			var typeLabel = Ti.UI.createLabel({
+				text:(waterSource.code == null) ? 'Not defined' : Ti.App.source_types.source_types[waterSource.source_type].name,
+				top:"24%",
+				left:"3%",
+				font:{
+					fontSize:"12dp"
+				},
+				color:'rgb(255,255,255)'
+			});
+			Ti.API.info(typeLabel.text);
+			contenidoMarcador.add(typeLabel);
+			
+			var locationLabel = Ti.UI.createLabel({
+				text:"Location",
+				top:"30%",
+				left:"3%",
+				font:{
+					fontSize:"12dp"
+				},
+				color:'rgb(255,255,255)'
+			});
+			contenidoMarcador.add(locationLabel);
+			w.add(contenidoMarcador);		
+		};
+		client.onerror = function(e){
+			return undefined;
+		};
+		client.send();		
+		w.open();
+	};
+	
+	namespace.funciones.addNoteWindow = function(e){
+		var back = Ti.UI.createButton({
+			title:'back'
+		});
+		
+		var w = Ti.UI.createWindow({
+			backgroundColor:'rgb(9, 53, 120)',
+			modal:true
+		});
+		
+		back.addEventListener('click', function(e){
+			w.close();
+		});
+		
+		var contenidoMarcador = Ti.UI.createView();
+		
+		if(Ti.Platform.getOsname() == 'android'){
+			back.top = "0%";
+			back.left = "3%";
+			contenidoMarcador.add(back);
+		}else{
+			w.leftNavButton = back;
+		}
+		
+		var waterSourceLabel = Ti.UI.createLabel({
+			text:'Water Source: '+e.source.info.name,
+			font:{
+		      fontFamily:'SixCaps'
+			},
+			top:'3%',
+			left:'3%'
+		});
+		contenidoMarcador.add(waterSourceLabel);
+		
+		var nameLabel = Ti.UI.createLabel({
+			text:'Name: ',
+			font:{
+		      fontFamily:'SixCaps'
+			},
+			top:'12%',
+			left:'3%'
+		});
+		contenidoMarcador.add(nameLabel);
+		
+		var nameField = Ti.UI.createTextField({
+			width:'30%',
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		    borderColor:'rgb(255,255,255)',
+			top:'12%',
+			left:'18%'
+		});
+		contenidoMarcador.add(nameField);
+		
+		var questionOne = Ti.UI.createLabel({
+			text:'Can foam be seen on the water?',
+			left:'3%',
+			top:'21%'
+		});
+		contenidoMarcador.add(questionOne);
+		
+		var questionTwo = Ti.UI.createLabel({
+			text:'Does it smell badly?',
+			left:'3%',
+			top:'30%'
+		});
+		contenidoMarcador.add(questionTwo);
+		
+		var questionThree = Ti.UI.createLabel({
+			text:'How much trash is there?',
+			left:'3%',
+			top:'42%'
+		});
+		contenidoMarcador.add(questionThree);
+		
+		var questionFour = Ti.UI.createLabel({
+			text:'How much trash is there?',
+			left:'3%',
+			top:'54%'
+		});
+		contenidoMarcador.add(questionFour);
+		
+		w.add(contenidoMarcador);
+		w.open();
+	};
+	
+	namespace.funciones.addWaterSourceWindow = function(){
+		var back = Ti.UI.createButton({
+			title:'back'
+		});
+		
+		var w = Ti.UI.createWindow({
+			backgroundColor:'rgb(9, 53, 120)',
+			modal:true
+		});
+		
+		back.addEventListener('click', function(e){
+			w.close();
+		});
+		
+		var contenidoMarcador = Ti.UI.createView();
+		
+		if(Ti.Platform.getOsname() == 'android'){
+			back.top = "0%";
+			back.left = "3%";
+			contenidoMarcador.add(back);
+		}else{
+			w.leftNavButton = back;
+		}
+		
+		var nameLabel = Ti.UI.createLabel({
+			text:'Name: ',
+			color:'rgb(255,255,255)',
+			top:'6%',
+			left:'3%'
+		});
+		contenidoMarcador.add(nameLabel);
+		
+		var nameField = Ti.UI.createTextField({
+			width:'30%',
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+			backgroundImage:'none',
+			backgroundColor:'rgb(255,255,255)',
+			color:'rgb(255,255,255)',
+		    borderColor:'rgb(255,255,255)',
+			top:'6%',
+			left:'21%'
+		});
+		contenidoMarcador.add(nameField);
+		
+		w.add(contenidoMarcador);
+		w.open();
+	};
+	
+	namespace.funciones.graphWindow = function(){
+		return Ti.UI.createWindow();
+	};
+	
+	
+})();
