@@ -1,0 +1,24 @@
+package aquaping;
+
+import org.json.simple.parser.*;
+import org.json.simple.*;
+
+public class AquaReport {
+
+    private String uID;
+    private String photo;
+    private String name;
+    private String reporter;
+    private String desc;
+    private String json;
+    
+    public AquaReport(uID) {
+	this.uID = uID;
+	photo = null;
+	name = null;
+	reporter = null;
+	desc = null;
+	json = null;
+    }
+
+}

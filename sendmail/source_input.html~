@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+  <title> mWater source input</title>
+</head>
+
+<body>
+<form method="get" action="send">
+  <fieldset>
+    <legend>Source information</legend>
+    Source: <input type="text" name="username" /><br><br>
+  </fieldset>
+
+  <input type="submit" value="SEND" />
+</form>
+</body>
