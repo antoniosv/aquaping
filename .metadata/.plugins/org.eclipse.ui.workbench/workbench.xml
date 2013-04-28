@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench version="2.0">
+<workbenchAdvisor/>
+<window height="578" width="1200" x="78" y="48">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.text" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.css" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.svg" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.appcelerator.titanium.ui.ide.tiappEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page focus="true" label="Workspace - Studio">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/saul/Documents/NASA/aquaping/mobile_app/Resources/app.js" title="app.js" tooltip="mobile_app/Resources/app.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mobile_app/Resources/app.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.aptana.editor.js" name="funciones.js" partName="funciones.js" path="/Users/saul/Documents/NASA/aquaping/mobile_app/Resources/funciones.js" title="funciones.js" tooltip="mobile_app/Resources/funciones.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mobile_app/Resources/funciones.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15217" selectionTopPixel="9375"/>
+</editor>
+<editor id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/saul/Downloads/KitchenSink-master/Resources/app.js" title="app.js" tooltip="KitchenSink/Resources/app.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/KitchenSink/Resources/app.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1326"/>
+</editor>
+<editor id="com.aptana.editor.js" name="welcome.js" partName="welcome.js" path="/Users/saul/Downloads/KitchenSink-master/Resources/welcome.js" title="welcome.js" tooltip="KitchenSink/Resources/welcome.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/KitchenSink/Resources/welcome.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="381"/>
+</editor>
+<editor id="com.aptana.editor.js" name="map_view2.js" partName="map_view2.js" path="/Users/saul/Downloads/KitchenSink-master/Resources/ui/handheld/ios/baseui/map_view2.js" title="map_view2.js" tooltip="KitchenSink/Resources/ui/handheld/ios/baseui/map_view2.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/KitchenSink/Resources/ui/handheld/ios/baseui/map_view2.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="409"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="com.aptana.explorer.view" partName="App Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="mobile_app">
+<project name="KitchenSink">
+<expanded>
+<element path="/KitchenSink/i18n"/>
+<element path="/KitchenSink/i18n/en"/>
+<element path="/KitchenSink/i18n/es"/>
+<element path="/KitchenSink/KindleFire_AndroidManifest"/>
+<element path="/KitchenSink/platform"/>
+<element path="/KitchenSink/platform/android"/>
+<element path="/KitchenSink/platform/android/res"/>
+<element path="/KitchenSink/platform/android/values"/>
+<element path="/KitchenSink/platform/android/xml"/>
+<element path="/KitchenSink/platform/iphone"/>
+<element path="/KitchenSink/platform/iphone/Settings.bundle"/>
+<element path="/KitchenSink/platform/iphone/Settings.bundle/en.lproj"/>
+<element path="/KitchenSink/Resources"/>
+<element path="/KitchenSink/Resources/android"/>
+<element path="/KitchenSink/Resources/android/images"/>
+<element path="/KitchenSink/Resources/etc"/>
+<element path="/KitchenSink/Resources/images"/>
+<element path="/KitchenSink/Resources/images/custom_tableview"/>
+<element path="/KitchenSink/Resources/images/dashboard"/>
+<element path="/KitchenSink/Resources/images/groupedview"/>
+<element path="/KitchenSink/Resources/images/imageview"/>
+<element path="/KitchenSink/Resources/images/scrollable_view"/>
+<element path="/KitchenSink/Resources/images/tableview"/>
+<element path="/KitchenSink/Resources/images/tabs"/>
+<element path="/KitchenSink/Resources/iphone"/>
+<element path="/KitchenSink/Resources/mobileweb"/>
+<element path="/KitchenSink/Resources/mobileweb/apple_startup_images"/>
+<element path="/KitchenSink/Resources/mobileweb/splash"/>
+<element path="/KitchenSink/Resources/ui"/>
+<element path="/KitchenSink/Resources/ui/handheld"/>
+<element path="/KitchenSink/Resources/ui/handheld/android"/>
+<element path="/KitchenSink/Resources/ui/handheld/ios"/>
+<element path="/KitchenSink/Resources/ui/handheld/ios/baseui"/>
+<element path="/KitchenSink/Resources/ui/handheld/ios/controls"/>
+<element path="/KitchenSink/Resources/ui/handheld/ios/mashups"/>
+<element path="/KitchenSink/Resources/ui/handheld/ios/phone"/>
+<element path="/KitchenSink/Resources/ui/handheld/ios/platform"/>
+<element path="/KitchenSink/Resources/ui/mobileweb"/>
+<element path="/KitchenSink/Resources/ui/tablet"/>
+<element path="/KitchenSink/Resources/ui/tablet/ios"/>
+<element path="/KitchenSink/Resources/ui/tablet/ios/baseui"/>
+</expanded>
+<selection>
+<element path="/KitchenSink/Resources/ui/handheld/ios/baseui/map_view2.js"/>
+</selection>
+</project>
+<project name="mobile_app">
+<expanded>
+<element path="/mobile_app/Resources"/>
+</expanded>
+<selection>
+<element path="/mobile_app/Resources/icons"/>
+</selection>
+</project>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="com.aptana.explorer.view" activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.appcelerator.titanium.ui.perspectives.TitaniumStudioPerspectiveFactory" id="com.appcelerator.titanium.ui.StudioPerspective" label="Studio"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.aptana.browser.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<alwaysOnActionSet id="com.aptana.ui.globalActionSet"/>
+<alwaysOnActionSet id="com.aptana.terminal.actionSet"/>
+<alwaysOnActionSet id="com.aptana.editor.common.presentation"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.aptana.js.debug.ui.actionSet"/>
+<show_view_action id="com.aptana.explorer.view"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<new_wizard_action id="com.aptana.ui.wizards.NewNodeJSProject"/>
+<new_wizard_action id="com.appcelerator.titanium.mobile.project_wizard"/>
+<new_wizard_action id="com.appcelerator.titanium.mobile.module.wizard"/>
+<new_wizard_action id="com.aptana.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="com.aptana.ui.WebPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.aptana.explorer.view"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="leftArea">
+<folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
+<page content="com.aptana.explorer.view" label="App Explorer"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="894" ratioRight="298" relationship="2" relative="leftArea">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19966443" ratioLeft="238" ratioRight="954" relationship="2" relative="leftArea"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1860045" ratio="0.7492447" ratioLeft="496" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.aptana.terminal.views.terminal:*" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="com.aptana.webserver.ui.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.7492447" ratioLeft="496" ratioRight="166" relationship="4" relative="leftArea">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="com.aptana.samples.ui.SamplesView" label="LabelNotFound"/>
+<page content="com.aptana.snippets.ui.views.SnippetsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/mobile_app/Resources/funciones.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/android/testservice.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/etc/todo.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/etc/version.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/etc/local_include.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.svg" path="/KitchenSink/Resources/images/insignia.svg"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/KitchenSink/Resources/mobileweb/splash/splash.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" path="/KitchenSink/Resources/mobileweb/splash/splash.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.text" path="/KitchenSink/Resources/mobileweb/splash/README"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/ui/tablet/ios/baseui/main_tests.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/welcome.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/KitchenSink/Resources/ui/handheld/ios/baseui/map_view2.js"/>
+</editors>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="12322" y="0"/>
+</item>
+<item historyLabel="testservice.js" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="10512" y="0"/>
+</item>
+<item historyLabel="todo.js" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="10512" y="0"/>
+</item>
+<item historyLabel="version.js" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="10512" y="0"/>
+</item>
+<item historyLabel="local_include.js" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="10512" y="0"/>
+</item>
+<item historyLabel="insignia.svg" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="splash.html" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="splash.css" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="README" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="splash.html" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main_tests.js" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="welcome.js" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="map_view2.js" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="insignia.svg" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="10512" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="1187" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="1243" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="14249" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="12966" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13210" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13270" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13345" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13400" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13420" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13463" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13518" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13538" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13602" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="13839" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="12" y="0"/>
+</item>
+<item historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="3544" y="0"/>
+</item>
+<item active="true" historyLabel="funciones.js" index="0">
+<position info="not_deleted" x="8343" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="com.appcelerator.ui.trim"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="map_view2.js" tooltip="KitchenSink/Resources/ui/handheld/ios/baseui/map_view2.js">
+<persistable path="/KitchenSink/Resources/ui/handheld/ios/baseui/map_view2.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="welcome.js" tooltip="KitchenSink/Resources/welcome.js">
+<persistable path="/KitchenSink/Resources/welcome.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="KitchenSink/Resources/app.js">
+<persistable path="/KitchenSink/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="main_tests.js" tooltip="KitchenSink/Resources/ui/tablet/ios/baseui/main_tests.js">
+<persistable path="/KitchenSink/Resources/ui/tablet/ios/baseui/main_tests.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="titanium.png" tooltip="KitchenSink/Resources/mobileweb/splash/titanium.png">
+<persistable path="/KitchenSink/Resources/mobileweb/splash/titanium.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.text" name="README" tooltip="KitchenSink/Resources/mobileweb/splash/README">
+<persistable path="/KitchenSink/Resources/mobileweb/splash/README"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" name="splash.css" tooltip="KitchenSink/Resources/mobileweb/splash/splash.css">
+<persistable path="/KitchenSink/Resources/mobileweb/splash/splash.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="splash.html" tooltip="KitchenSink/Resources/mobileweb/splash/splash.html">
+<persistable path="/KitchenSink/Resources/mobileweb/splash/splash.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.svg" name="insignia.svg" tooltip="KitchenSink/Resources/images/insignia.svg">
+<persistable path="/KitchenSink/Resources/images/insignia.svg"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="local_include.js" tooltip="KitchenSink/Resources/etc/local_include.js">
+<persistable path="/KitchenSink/Resources/etc/local_include.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="route.csv" tooltip="KitchenSink/Resources/etc/route.csv">
+<persistable path="/KitchenSink/Resources/etc/route.csv"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="version.js" tooltip="KitchenSink/Resources/etc/version.js">
+<persistable path="/KitchenSink/Resources/etc/version.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="todo.js" tooltip="KitchenSink/Resources/etc/todo.js">
+<persistable path="/KitchenSink/Resources/etc/todo.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="testservice.js" tooltip="KitchenSink/Resources/android/testservice.js">
+<persistable path="/KitchenSink/Resources/android/testservice.js"/>
+</file>
+</mruList>
+</workbench>

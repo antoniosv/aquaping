@@ -10,14 +10,22 @@
 		});
 		
 		var mapWindow = namespace.funciones.mapWindow();
+		var tipsWindow = namespace.funciones.configurationWindow();
 		var configurationWindow = namespace.funciones.configurationWindow();
-		
+
 		namespace.Tab1 = Titanium.UI.createTab({
 			window: mapWindow,
 			icon: 'icons/world.png',
 			title:'Water Sources',
 		});
+		
 		namespace.Tab2 = Titanium.UI.createTab({
+			window: tipsWindow,
+			icon:'icons/tips.png',
+			title:'Tips'
+		});
+		
+		namespace.Tab3 = Titanium.UI.createTab({
 			window: configurationWindow,
 			icon:'icons/configuration.png',
 			title:'Configuration'
@@ -25,6 +33,7 @@
 		
 		tabGroup.addTab(namespace.Tab1);
 		tabGroup.addTab(namespace.Tab2);
+		tabGroup.addTab(namespace.Tab3);
 		return tabGroup;
 	
 	};
@@ -36,7 +45,7 @@
 	
 	namespace.funciones.mapWindow = function(){
 		var win = Ti.UI.createWindow({
-			barColor:'rgb(197, 53, 37)',
+			barColor:'rgb(9, 53, 120)',
 			title:'Water Sources'
 		});
 		
@@ -49,6 +58,10 @@
 				longitudeDelta:0.05
 			},
 			userLocation:true
+		});
+		
+		map.addEventListener('click', function(e){
+			Ti.API.info("Click en map view: "+JSON.stringify(e));
 		});
 		
 		namespace.funciones.getAnnotations(map);
@@ -87,7 +100,7 @@
 						latitude:datos.sources[i].latitude,
 						title:datos.sources[i].name,
 						subtitle:datos.sources[i].desc,
-						image:'icons/waterdrop.png',
+						image:'icons/waterPin.png',
 						uid:datos.sources[i].uid,
 						font:{
 						      fontFamily:'SixCaps'
@@ -95,8 +108,8 @@
 					});
 					
 					var moreInfo = Ti.UI.createImageView({
-						height:"16px",
-						width:"16px",
+						height:"32px",
+						width:"32px",
 						image:'icons/search.png',
 						info:datos.sources[i]	
 					});					
@@ -144,7 +157,7 @@
 		var w = Ti.UI.createWindow({
 			backgroundColor:'rgb(9, 53, 120)',
 			title:'Water Source',
-			barColor:'rgb(197, 53, 37)',
+			barColor:'rgb(9, 53, 120)',
 			modal:true
 		});
 		back.addEventListener('click', function(e){
@@ -167,26 +180,25 @@
 			var waterSource = JSON.parse(this.responseText);
 			Ti.API.info(waterSource);
 			Ti.API.info(Ti.App.source_types.source_types[0].name);
+			
+			var imageWaterSource = Ti.UI.createImageView({
+				image:'icons/water.png',
+				center:'0%',
+				top:'3%'
+			});
+			contenidoMarcador.add(imageWaterSource);
+			
 			var nameLabel = Ti.UI.createLabel({
 				text:waterSource.name,
-				top:"3%",
+				top:"56%",
 				left:"3%",
 				color:'rgb(255,255,255)'
 			});
 			contenidoMarcador.add(nameLabel);
 			
-			var imageWaterSource = Ti.UI.createImageView({
-				image:'icons/water.png',
-				width:'128px',
-				height:'128px',
-				right:'3%',
-				top:'3%'
-			});
-			contenidoMarcador.add(imageWaterSource);
-			
 			var descriptionLabel = Ti.UI.createLabel({
 				text:waterSource.desc,
-				top:"9%",
+				top:"62%",
 				left:"3%",
 				font:{
 					fontSize:"15dp"
@@ -197,7 +209,7 @@
 			
 			var id_text = Ti.UI.createLabel({
 				text:'ID:',
-				top:"15%",
+				top:"68%",
 				left:"3%",
 				color:'rgb(255,255,255)',
 				font:{
@@ -208,7 +220,7 @@
 			
 			var idLabel = Ti.UI.createLabel({
 				text:waterSource.code,
-				top:"15%",
+				top:"68%",
 				left:"12%",
 				font:{
 					fontSize:"12dp"
@@ -219,7 +231,7 @@
 			
 			var type_text = Ti.UI.createLabel({
 				text:'Type:',
-				top:"24%",
+				top:'75%',
 				left:"3%",
 				color:'rgb(255,255,255)',
 				font:{
@@ -230,7 +242,7 @@
 			
 			var typeLabel = Ti.UI.createLabel({
 				text:(waterSource.source_type == null) ? 'Not defined' : Ti.App.source_types.source_types[waterSource.source_type].name,
-				top:"24%",
+				top:'75%',
 				left:"15%",
 				font:{
 					fontSize:"12dp"
@@ -242,28 +254,28 @@
 			
 			var ducha = Ti.UI.createImageView({
 				image:'icons/water_sources_warnings/ducha.png',
-				top:'42%',
+				top:'85%',
 				left:'3%',
-				height:'32px',
-				width:'32px'
+				height:'128px',
+				width:'128px'
 			});
 			contenidoMarcador.add(ducha);
 			
 			var noBaniarte = Ti.UI.createImageView({
 				image:'icons/water_sources_warnings/noBaniarte.png',
-				top:'42%',
+				top:'85%',
 				left:'24%',
-				height:'32px',
-				width:'32px'
+				height:'128px',
+				width:'128px'
 			});
 			contenidoMarcador.add(noBaniarte);
 			
 			var noDarselaAanimales = Ti.UI.createImageView({
 				image:'icons/water_sources_warnings/noDarselaAanimales.png',
-				top:'42%',
+				top:'85%',
 				left:'45%',
-				height:'32px',
-				width:'32px'
+				height:'128px',
+				width:'128px'
 			});
 			contenidoMarcador.add(noDarselaAanimales);
 			
@@ -303,9 +315,6 @@
 		
 		var waterSourceLabel = Ti.UI.createLabel({
 			text:'Water Source: '+e.source.info.name,
-			font:{
-		      fontFamily:'SixCaps'
-			},
 			top:'3%',
 			left:'3%'
 		});
@@ -313,9 +322,6 @@
 		
 		var nameLabel = Ti.UI.createLabel({
 			text:'Name: ',
-			font:{
-		      fontFamily:'SixCaps'
-			},
 			top:'12%',
 			left:'3%'
 		});
@@ -331,69 +337,66 @@
 		contenidoMarcador.add(nameField);
 		
 		var questionOne = Ti.UI.createLabel({
-			text:'Can foam be seen on the water?',
+			text:'Is there foam on the surface of the water?',
 			left:'3%',
 			top:'21%'
 		});
 		contenidoMarcador.add(questionOne);
 		
 		var questionTwo = Ti.UI.createLabel({
-			text:'Does it smell badly?',
+			text:'Does the water smell oddly?',
 			left:'3%',
 			top:'30%'
 		});
 		contenidoMarcador.add(questionTwo);
 		
 		var questionThree = Ti.UI.createLabel({
-			text:'How much trash is there?',
+			text:'How much trash can be seen around?',
 			left:'3%',
 			top:'42%'
 		});
 		contenidoMarcador.add(questionThree);
-		
-		var questionFour = Ti.UI.createLabel({
-			text:'How much trash is there?',
-			left:'3%',
-			top:'54%'
-		});
-		contenidoMarcador.add(questionFour);
 		
 		w.add(contenidoMarcador);
 		w.open();
 	};
 	
 	namespace.funciones.addWaterSourceWindow = function(){
-		var back = Ti.UI.createButton({
+		var backButton = Ti.UI.createButton({
 			title:'back'
+		});
+		
+		var cameraButton = Ti.UI.createButton({
+			image:'icons/photo.png'
+		});
+		cameraButton.addEventListener('click', function(e){
+			Ti.Media.showCamera({
+				success:function(e){
+					var image = e.media;
+					if(e.mediaType == Ti.Media.MEDIA_TYPE_PHOTO){
+						cameraButton.image = Ti.UI.createImageView({image:image,height:'32px',width:'32px'}).toImage();
+					}
+				}
+			});
 		});
 		
 		var w = Ti.UI.createWindow({
 			backgroundColor:'rgb(9, 53, 120)',
 			title:'New Water Source',
-			barColor:'rgb(197, 53, 37)',
+			barColor:'rgb(9, 53, 120)',
+			leftNavButton: backButton,
+			rightNavButton: cameraButton,
 			modal:true
 		});
 		
-		back.addEventListener('click', function(e){
+		backButton.addEventListener('click', function(e){
 			w.close();
 		});
 		
-		var scrollContenido = Ti.UI.createScrollView({
-			contentHeight:'auto',
-			showVerticalScrollIndicator:true
-		});
 		
 		var contenidoMarcador = Ti.UI.createView({
-			height:'200%'
+			height:'100%'
 		});
-		
-		if(Ti.Platform.getOsname() == 'android'){
-			back.top = "0%";
-			back.left = "3%";
-			contenidoMarcador.add(back);
-		}else{
-			w.leftNavButton = back;
-		}
 		
 		var tr = Titanium.UI.create2DMatrix();
 		tr = tr.rotate(90);
@@ -405,16 +408,17 @@
 		
 		var sourceTypeField = Ti.UI.createTextField({
 			width:'50%',
-			hintText:'select type',
-			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+			hintText:'Select type',
+			//borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 			backgroundImage:'none',
 			rightButton:dropDownButton,
 			rightButtonMode:Titanium.UI.INPUT_BUTTONMODE_ALWAYS,
 			//editable:false,
 			backgroundColor:'rgb(255,255,255)',
 			color:'rgb(0,0,0)',
+			borderRadius:5,
 		    borderColor:'rgb(255,255,255)',
-			top:'6%',
+			top:'12%',
 			left:'42%'
 		});
 		contenidoMarcador.add(sourceTypeField);
@@ -422,7 +426,7 @@
 		var sourceTypeLabel = Ti.UI.createLabel({
 			text:'Source Type: ',
 			color:'rgb(255,255,255)',
-			top:'6%',
+			top:'12%',
 			left:'3%'
 		});
 		contenidoMarcador.add(sourceTypeLabel);
@@ -447,7 +451,7 @@
 			systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
 		});
 		 
-		var toolbar =  Titanium.UI.createToolbar({
+		var toolbar =  Titanium.UI.iOS.createToolbar({
 			top:0,
 			items:[cancel,spacer,done]
 		});
@@ -492,7 +496,7 @@
 		var nameLabel = Ti.UI.createLabel({
 			text:'Name: ',
 			color:'rgb(255,255,255)',
-			top:'27%',
+			top:'3%',
 			left:'3%'
 		});
 		contenidoMarcador.add(nameLabel);
@@ -500,124 +504,181 @@
 		var nameField = Ti.UI.createTextField({
 			hintText:' Optional name',
 			width:'60%',
-			height:'2%',
 			color:'rgb(164, 164, 164)',
 			backgroundColor:'rgb(255,255,255)',
 			borderRadius:5,
-			top:'27%',
+			top:'3%',
 			left:'21%'
 		});
 		contenidoMarcador.add(nameField);
 		
-		var questionsTitleLabel = Ti.UI.createLabel({
-			text:'Questions: ',
+		var questionOne = Ti.UI.createLabel({
+			text:'How clear is the water?',
 			color:'rgb(255,255,255)',
-			top:'30%',
+			top:'18%',
 			left:'3%'
 		});
-		contenidoMarcador.add(questionsTitleLabel);
+		contenidoMarcador.add(questionOne);
 		
-		var questionOneLabel = Ti.UI.createLabel({
-			text:'Does it smell bad ?',
-			color:'rgb(255, 255, 255)',
-			top:'33%'
+		var sliderQuestionOne = Titanium.UI.createSlider({
+			min: 0,
+			max: 10,
+			height:'6%',
+			width:'90%',
+			value:5,
+			borderRadius:5,
+			center:'0%',
+			top:'24%',
+			thumbImage:'icons/circleYellow.png'
 		});
-		contenidoMarcador.add(questionOneLabel);
+		/*
+		backgroundGradient: {
+		        type: 'linear',
+		        startPoint: { x: '0%', y: '50%' },
+		        endPoint: { x: '100%', y: '50%' },
+		        colors: [ { color: 'red', offset: 0.0}, { color: 'yellow', offset: 0.25 }, { color: 'green', offset: 1.0 } ],
+		},
+		*/
+		sliderQuestionOne.addEventListener('change', function(e){
+			//sliderLabel.text = String.format("%3.1f", e.value);
+			if(e.value > 6){
+				sliderQuestionOne.thumbImage = 'icons/circleGreen.png';
+			}else if(e.value < 3){
+				sliderQuestionOne.thumbImage = 'icons/circleRed.png';
+			}else{
+				sliderQuestionOne.thumbImage = 'icons/circleYellow.png'
+			}
+		});
+		contenidoMarcador.add(sliderQuestionOne);
 		
-		var bb_questionOneYes = Ti.UI.createButtonBar({
-			labels:{ title:'Yes'},
+		
+		var selectedQuestionTwoButton = 'currentLocation';
+
+		var questionTwo = Ti.UI.createLabel({
+			text:'Is there foam on the sirface of the water?',
+			color:'rgb(255,255,255)',
+			left:'3%',
+			top:'30%'
+		});
+		contenidoMarcador.add(questionTwo);
+		
+		var selectedQuestionTwoButton = 'currentLocation';
+		
+		var questionTwoButton = Ti.UI.iOS.createTabbedBar({
+			labels:['Yes', 'No'],
+		    backgroundColor:'#336699',
+		    top:'39%',
 		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-		    width:'20%',
-       		top:'36%'
+		    height:'6%',
+		    center:'0%',
+		    width:'90%'
 		});
 		
-		var bb_questionOneNo = Ti.UI.createButtonBar({
-			labels:{ title:'No'},
-		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-		    width:'20%',
-       		top:'36%'
+		questionTwoButton.addEventListener('click', function(e){
+			questionTwoButton.labels[e.index].enable = false;
+			if(e.index == 1){
+				questionTwoButton.labels[0].enable = true;
+				selectedQuestionTwoButton = questionTwoButton.labels[0];
+			}else{
+				questionTwoButton.labels[1].enable = true;
+				selectedQuestionTwoButton = questionTwoButton.labels[1];
+			}
 		});
-		contenidoMarcador.add(bb_questionOne);
+		contenidoMarcador.add(questionTwoButton);
 		
- 		var answerQuestionOne = undefined;
-	    bb_questionOne.addEventListener('click', function(e){
-	    	if(e.index == 1){
-	    		buttonObjectsOne[1].enabled = false;
-	    		buttonObjectsOne[0].enabled = true;
-	    		answerQuestionOne = "Yes";
-	    	}else{
-	    		buttonObjectsOne[0].enabled = false;
-	    		buttonObjectsOne[1].enabled = true;
-	    		answerQuestionOne = "No";
-	    	}
-	    });
-	    
-		var questionTwoLabel = Ti.UI.createLabel({
-			text:'Can foam be seen on the water ?',
+		
+		var questionThree = Ti.UI.createLabel({
+			text:'Does the water smell oddly?',
 			color:'rgb(255, 255, 255)',
-			top:'39%'
-		});
-		contenidoMarcador.add(questionTwoLabel);
-		
-		var buttonObjectsTwo = [{ title:'Yes', title:'No'}];
-		var bb_questionTwo = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
-       		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-       		top:'42%'
-		});
-		
-		contenidoMarcador.add(bb_questionTwo);
-		
- 		var answerQuestionTwo = undefined;
-	    bb_questionTwo.addEventListener('click', function(e){
-	    	if(e.index == 1){
-	    		buttonObjectsTwo[1].enabled = false;
-	    		buttonObjectsTwo[0].enabled = true;
-	    		answerQuestionTwo = "Yes";
-	    	}else{
-	    		buttonObjectsTwo[0].enabled = false;
-	    		buttonObjectsTwo[1].enabled = true;
-	    		answerQuestionTwo = "No";
-	    	}
-	    });
-		
-		var questionThreeLabel = Ti.UI.createLabel({
-			text:'How darkened is the water seen ?',
-			color:'rgb(255, 255, 255)',
+			left:'3%',
 			top:'45%'
 		});
-		contenidoMarcador.add(questionThreeLabel);
+		contenidoMarcador.add(questionThree);
 		
-		var buttonObjectsThree = [{ title:'Yes', title:'No'}];
-		var bb_questionThree = Ti.UI.createButtonBar({
-			labels:{ title:'Yes', title:'No'},
-       		style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-       		top:'48%'
+		var selectedQuestionThreeButton = 'currentLocation';
+		
+		var questionThreeButton = Ti.UI.iOS.createTabbedBar({
+			labels:['Yes', 'No'],
+		    backgroundColor:'#336699',
+		    top:'54%',
+		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+		    height:'6%',
+		    center:'0%',
+		    width:'90%'
 		});
 		
-		contenidoMarcador.add(bb_questionThree);
+		questionThreeButton.addEventListener('click', function(e){
+			questionThreeButton.labels[e.index].enable = false;
+			if(e.index == 1){
+				questionThreeButton.labels[0].enable = true;
+				selectedQuestionThreeButton = questionThreeButton.labels[0];
+			}else{
+				questionThreeButton.labels[1].enable = true;
+				selectedQuestionThreeButton = questionThreeButton.labels[1];
+			}
+		});
+		contenidoMarcador.add(questionThreeButton);
 		
- 		var answerQuestionThree = undefined;
-	    bb_questionThree.addEventListener('click', function(e){
-	    	if(e.index == 1){
-	    		buttonObjectsThree[1].enabled = false;
-	    		buttonObjectsThree[0].enabled = true;
-	    		answerQuestionThree = "Yes";
-	    	}else{
-	    		buttonObjectsThree[0].enabled = false;
-	    		buttonObjectsThree[1].enabled = true;
-	    		answerQuestionThree = "No";
-	    	}
-	    });
+		
+		var questionFour = Ti.UI.createLabel({
+			text:'How much trash can be seen around?',
+			color:'rgb(255, 255, 255)',
+			left:'3%',
+			top:'60%'
+		});
+		contenidoMarcador.add(questionFour);
+		
+		var selectedQuestionFourButton = 'currentLocation';
+		
+		
+		var sliderQuestionFour = Titanium.UI.createSlider({
+			min: 0,
+			max: 10,
+			height:'6%',
+			width:'90%',
+			value:5,
+			borderRadius:5,
+			center:'0%',
+			top:'66%',
+			thumbImage:'icons/circleYellow.png'
+		});
+		/*
+		backgroundGradient: {
+		        type: 'linear',
+		        startPoint: { x: '0%', y: '50%' },
+		        endPoint: { x: '100%', y: '50%' },
+		        colors: [ { color: 'red', offset: 0.0}, { color: 'yellow', offset: 0.25 }, { color: 'green', offset: 1.0 } ],
+		},
+		*/
+		sliderQuestionFour.addEventListener('change', function(e){
+			//sliderLabel.text = String.format("%3.1f", e.value);
+			if(e.value > 6){
+				sliderQuestionFour.thumbImage = 'icons/circleGreen.png';
+			}else if(e.value < 3){
+				sliderQuestionFour.thumbImage = 'icons/circleRed.png';
+			}else{
+				sliderQuestionFour.thumbImage = 'icons/circleYellow.png'
+			}
+		});
+		contenidoMarcador.add(sliderQuestionFour);
+
+		var locationLabel = Ti.UI.createLabel({
+			text:'Location: ',
+			color:'rgb(255, 255, 255)',
+			left:'3%',
+			top:'75%'
+		});
+		contenidoMarcador.add(locationLabel);
+
 		
 		var selectedLocationButton = 'currentLocation';
 		
-		var locationButton = Titanium.UI.iOS.createTabbedBar({
+		var locationButton = Ti.UI.iOS.createTabbedBar({
 			labels:['Set current location', 'Choose location'],
 		    backgroundColor:'#336699',
-		    top:'51%',
+		    top:'82%',
 		    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-		    height:'3%',
+		    height:'6%',
 		    center:'0%',
 		    width:'90%'
 		});
@@ -626,20 +687,22 @@
 			locationButton.labels[e.index].enable = false;
 			if(e.index == 1){
 				locationButton.labels[0].enable = true;
+				selectedLocationButton = locationButton.labels[0];
 			}else{
 				locationButton.labels[1].enable = true;
+				selectedLocationButton = locationButton.labels[1];
 			}
 		});
 		contenidoMarcador.add(locationButton);
 
 		var enviarButton = Ti.UI.createButton({
 			title:'Submit',
-			top:'57%'
+			height:'6%',
+			top:'90%'
 		});
 		contenidoMarcador.add(enviarButton);
 
-		scrollContenido.add(contenidoMarcador);
-		w.add(scrollContenido);
+		w.add(contenidoMarcador);
 		w.open();
 	};
 	

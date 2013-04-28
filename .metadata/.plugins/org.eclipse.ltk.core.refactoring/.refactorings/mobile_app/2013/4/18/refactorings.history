@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;mobile_app/Resources/icons/INFO_32x32-32.png&apos; to &apos;tips.png&apos;" description="Rename resource &apos;INFO_32x32-32.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/icons/INFO_32x32-32.png" name="tips.png" stamp="1367111407369" updateReferences="true"/>
+</session>

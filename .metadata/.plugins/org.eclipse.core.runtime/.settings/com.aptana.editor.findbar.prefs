@@ -1,0 +1,3 @@
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Fri Apr 26 13\:58\:36 GMT-06\:00 2013\n9\=nameField\n8\=textArea\n7\=questionOne\n6\=mapview\n5\=map\n4\=createToolBar\n3\=One\n2\=Two\n1\=rgb(9, 53, 120)\n0\=rgb(197, 53, 37)\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Fri Apr 26 13\:58\:36 GMT-06\:00 2013\n3\=sourceType\n2\=Two\n1\=Three\n0\=rgb(9, 53, 120)\n
+eclipse.preferences.version=1
