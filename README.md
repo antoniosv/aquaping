@@ -7,13 +7,35 @@ Our mobile app, aquaping, attends the need for consulting, providing, and sharin
 The mobile app:
 
 Can be found inside the mobile_app folder. In order to be able to develop for both Android and iOS simultaneously, the <a href="http://www.appcelerator.com/platform/titanium-platform/">Titanium framework</a> was used.
+Although at first our plan was to use <a href="http://mWater.co">mWater</a> as the base for our project, we've seen certain limitations in the way we handle data. For this reason, we've proposed our own variation of a RESTful API with the following fields:
 
+<table>
+<tr><td>Water Source</td></tr>
+<tr><td>Name</td></tr>
+<tr><td>Source_type_id</td></tr>
+<tr><td>Description</td></tr>
+<tr><td>Photo_id</td></tr>
+<tr><td>Id</td></tr>
+</table>
+
+<table>
+<tr><td>Notes WaterSource</td></tr>
+<tr><td>Water_source_id</td></tr>
+<tr><td>Id</td></tr>
+<tr><td>Description</td></tr>
+</table>
+
+<table>
+<tr><td>Photos water sources</td></tr>
+<tr><td>Id</td></tr>
+<tr><td>Photo_url</td></tr>
+</table>
 
 -----
 
 The web service:
 
-Using the servlet technology, we developed a prototype in which we receive the information from the new report generated from the app, and we direct this information to the emails of the parties subscribed to that area. For now, it's sending all the reports to a static list.
+Found under the sendmail folder. Using the servlet technology, we developed a prototype in which we receive the information from the new report generated from the app, and we direct this information to the emails of the parties subscribed to that area. For now, it's sending all the reports to a static list.
 
 
 ----- 
