@@ -52,3 +52,12 @@ Currently, the application allows viewing of CO2 levels, although the display mu
 
 Future work for aquaping:
 
+At this time, even though aquaping is a working prototype, there's much work to be done. For example, a revamped webservice with a RESTful API has to be made in order to take the new input from the users. Regarding the "ticket" or reporting system, the functionality in which a party can subscribe to the reports of a certain area isn't yet implemented: the idea is to be able to subscribe by selecting a region on the map, or either by country or state.
+
+To future versions of aquaping:
+
+- Taking the conceptual product from the CO2 pollution visualization project, the aim is to generate visualizations of the data obtained with aquaping. One might be interested in looking at the most reported areas in a given timeframe, or perhaps the most contaminated areas in a region.
+
+- Build a web application where anyone (environmental organizations, health departments, etc.) can subscribe to the desired region, and thereafter receiving the appropriate reports.
+
+- Improve usability for both the iOS and Android version.
