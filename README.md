@@ -60,4 +60,4 @@ To future versions of aquaping:
 
 - Build a web application where anyone (environmental organizations, health departments, etc.) can subscribe to the desired region, and thereafter receiving the appropriate reports.
 
-- Improve usability for both the iOS and Android version.
+- Improve usability for both the iOS and Android versions.
